@@ -1,0 +1,8 @@
+ru\weedcmd\menu\CategoryMenu.class
+ru\weedcmd\util\ItemBuilder.class
+ru\weedcmd\menu\MenuListener.class
+ru\weedcmd\listener\CustomItemListener.class
+ru\weedcmd\config\ConfigLoader.class
+ru\weedcmd\menu\ItemsMenu.class
+ru\weedcmd\WeedCmdPlugin.class
+ru\weedcmd\config\ItemConfig.class

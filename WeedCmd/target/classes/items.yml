@@ -1,0 +1,103 @@
+# Пример конфигурации. Новые предметы добавляются в секцию items.
+categories:
+  plants: "&aРастения"
+  tools: "&6Инструменты"
+  smoking: "&7Сигареты и вейпы"
+
+items:
+  example_plant:
+    name: "&aПример растения"
+    material: "FERN"
+    modelData: 1001
+    category: "plants"
+    lore:
+      - "&7Пример описания предмета"
+      - "&eНажми, чтобы получить"
+    unbreakable: false
+    stackable: true
+    drop: true
+    hat: false
+    hide-nickname: false
+    use-cooldown: 0
+    open-type: ["interact"]
+    smoke: false
+    dizziness-seconds: 0
+
+  example_tool:
+    name: "&6Пример инструмента"
+    material: "BLAZE_ROD"
+    modelData: 1002
+    category: "tools"
+    lore:
+      - "&7Второй пример"
+    unbreakable: true
+    stackable: false
+    drop: true
+    hat: false
+    hide-nickname: false
+    use-cooldown: 0
+    open-type: ["interact"]
+    smoke: false
+    dizziness-seconds: 0
+
+  cigarette:
+    name: "&fСигарета"
+    material: "STICK"
+    modelData: 1101
+    category: "smoking"
+    lore:
+      - "&7ПКМ — затянуться"
+      - "&8Расходуется при использовании"
+      - "&eПерезарядка: 3 сек."
+    unbreakable: false
+    stackable: true
+    drop: true
+    hat: false
+    hide-nickname: false
+    use-cooldown: 3
+    open-type: ["interact"]
+    smoke: true
+    dizziness-seconds: 4
+    execute:
+      - "message:&7Вы сделали затяжку."
+
+  vape:
+    name: "&bВейп"
+    material: "BLAZE_ROD"
+    modelData: 1102
+    category: "smoking"
+    lore:
+      - "&7ПКМ — сделать затяжку"
+      - "&eПерезарядка: 2 сек."
+    unbreakable: false
+    stackable: false
+    drop: true
+    hat: false
+    hide-nickname: false
+    use-cooldown: 2
+    open-type: ["interact"]
+    smoke: true
+    dizziness-seconds: 2
+    execute:
+      - "message:&bВы сделали затяжку из вейпа."
+
+  cooldown_example:
+    name: "&dПредмет с перезарядкой"
+    material: "AMETHYST_SHARD"
+    modelData: 1103
+    category: "tools"
+    lore:
+      - "&7Пример обычной перезарядки"
+      - "&eПКМ — эффект через execute"
+    unbreakable: false
+    stackable: false
+    drop: true
+    hat: false
+    hide-nickname: false
+    use-cooldown: 10
+    open-type: ["interact"]
+    execute:
+      - "message:&dПредмет активирован!"
+      - "player:playsound minecraft:block.amethyst_block.chime master %player% ~ ~ ~ 1 1"
+    smoke: false
+    dizziness-seconds: 0

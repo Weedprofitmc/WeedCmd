@@ -1,0 +1,23 @@
+name: WeedCmdPlugin
+version: 2.0.0
+main: ru.weedcmd.WeedCmdPlugin
+api-version: '1.21'
+author: weed
+description: Профессиональное GUI-меню предметов с категориями и командами
+
+commands:
+  weedcmd:
+    description: Открыть меню предметов или управлять плагином
+    usage: /weedcmd [give <игрок> <id|modelData> [количество] | reload]
+    aliases: [wc]
+
+permissions:
+  weedcmd.use:
+    description: Разрешает открывать меню предметов
+    default: op
+  weedcmd.give:
+    description: Разрешает выдавать предметы другим игрокам
+    default: op
+  weedcmd.reload:
+    description: Разрешает перезагружать конфигурацию плагина
+    default: op
